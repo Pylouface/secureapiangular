@@ -1,0 +1,16 @@
+<div class="row">
+    <!--On affiche la liste des champs-->
+    <div *ngFor="let champs of listesChamps" class="col-2">
+        <!-- on affiche par default le nom du champs et le bouton delete-->
+        <div *ngIf="champs._DISPLAY == false">
+            <button class="btn btn-danger" (click)="delete(champs)">X</button>
+            <span (dblclick)="displayUpdate(champs)">{{champs._DESCRIPTION}}</span>    
+        </div>
+        <!--Si on double click sur la description cela nous ouvre le formulaire de modification-->
+        <div *ngIf="champs._DISPLAY == true">
+            <input type="text" [(ngModel)]="champs._DESCRIPTION"/>
+            <button class="btn btn-primary" (click)="update(champs)">Modifier</button>
+            <button class="btn btn-danger" (click)="hideUpdate(champs)">Annuler</button>
+        </div>
+    </div>
+</div>

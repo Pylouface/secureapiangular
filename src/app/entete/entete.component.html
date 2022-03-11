@@ -1,0 +1,16 @@
+<!--Menu classique-->
+<div class="container-fluid" id="menu">
+    <div class="row" >
+      <div class="col">
+        <nav class="navbar navbar-dark bg-dark">
+          <div class="container-fluid">
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" [(ngModel)]="description" placeholder="description du champs" aria-label="Search" name="description">
+              <button class="btn btn-success" type="button" (click)="addChamps()">Ajouter un champs</button>
+              <button class="btn btn-danger" type="button" (click)="deconnexion()">Deconnexion</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>

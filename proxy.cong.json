@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "http://141.94.223.96/Charley/secureToken/API/",
+      "secure": false
+    }
+  }
